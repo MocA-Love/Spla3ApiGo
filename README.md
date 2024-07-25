@@ -17,7 +17,7 @@ Go 1.22.4
 2. Ruuuuuuuun:
 
     ```bash
-    go run main.go
+    go run .
     ```
 
 
