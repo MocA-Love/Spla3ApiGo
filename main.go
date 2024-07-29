@@ -20,6 +20,7 @@ func main() {
 		"fest-challenge":    "フェスマッチ(チャレンジ)",
 		"x":                 "Xマッチ",
 		"event":             "イベントマッチ",
+		"coop-grouping":     "サーモンラン",
 	}
 
 	endpoint  := fmt.Sprintf("%s/%s/schedule", APIBaseURL, matchType)
@@ -85,9 +86,14 @@ func createMessage(data NormalStageInfo, matchType string, matchTypes map[string
 			messages = append(messages, fmt.Sprintf(" [%s]\n", result.Rule.Name))
 		}
 
-		if result.Stages != nil {
-			for _, stage := range result.Stages {
-				messages = append(messages, fmt.Sprintf("　- %s\n", stage.Name))
+		for _, stage := range result.Stages {
+			messages = append(messages, fmt.Sprintf("　- %s\n", stage.Name))
+		}
+
+		if result.Stage != nil {
+			messages = append(messages, fmt.Sprintf("　- %s\n", result.Stage.Name))
+			if result.Boss != nil {
+				messages = append(messages, fmt.Sprintf("　　ボス: %s,\n", result.Boss.Name))
 			}
 		}
 

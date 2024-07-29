@@ -17,6 +17,15 @@ type NormalStageInfo struct {
 			Key  string `json:"key"`
 			Name string `json:"name"`
 		} `json:"rule"`
+		Boss          *struct {
+			ID    string `json:"id"`
+			Name  string `json:"name"`
+		} `json:"boss"`
+		Stage         *struct {
+			ID    int    `json:"id"`
+			Name  string `json:"name"`
+			Image string `json:"image"`
+		} `json:"stage"`
 		Stages        []struct {
 			ID    int    `json:"id"`
 			Name  string `json:"name"`

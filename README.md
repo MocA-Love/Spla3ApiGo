@@ -23,10 +23,13 @@ Go 1.22.4
 
 ## Matchtype?
 
-- `regular`: レギュラーマッチ
-- `bankara-open`: バンカラマッチ(オープン)
-- `bankara-challenge`: バンカラマッチ(チャレンジ)
-- `fest`: フェスマッチ(オープン)
-- `fest-challenge`: フェスマッチ(チャレンジ)
-- `x`: Xマッチ
-- `event`: イベントマッチ
+| Matchtype          | 日本語                    |
+|--------------------|---------------------------|
+| regular            | レギュラーマッチ           |
+| bankara-open       | バンカラマッチ(オープン)   |
+| bankara-challenge  | バンカラマッチ(チャレンジ) |
+| fest               | フェスマッチ(オープン)     |
+| fest-challenge     | フェスマッチ(チャレンジ)   |
+| x                  | Xマッチ                   |
+| event              | イベントマッチ            |
+| coop-grouping      | サーモンラン              |
